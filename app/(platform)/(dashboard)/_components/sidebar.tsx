@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Accordion } from "@/components/ui/accordion";
+import NavItems, { Organization } from "./navitems";
 
 
 interface SidebarProps {
@@ -70,6 +71,28 @@ const Sidebar = ({ storageKey = "t-sidebar-state" }: SidebarProps) => {
                     </Button>
                 </div>
             </div>
+            <Accordion
+                type="multiple"
+                defaultValue={defaultAccordionValue}
+                className="space-y-2"
+            >
+
+
+                {
+                    userMemberships.data.map(({ organization }) => (
+                        <NavItems
+                            key={organization.id}
+                            onExpand={onExpand}
+                            isActive={activeOrganization?.id === organization.id}
+                            isExpanded={expanded[organization.id]}
+                            organization={organization as Organization}
+                        />
+                    ))
+                }
+
+
+
+            </Accordion>
         </>
 
     )
