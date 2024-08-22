@@ -1,6 +1,6 @@
-import NavbarPage from "./_components/Navbar/page"
+import NavbarPage from "./_components/navbar"
 
-const OrganizationIdLayout = ({ children }: { children: React.ReactNode }) => {
+const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
     return (
         <div>
             <NavbarPage />
@@ -9,4 +9,4 @@ const OrganizationIdLayout = ({ children }: { children: React.ReactNode }) => {
     )
 }
 
-export default OrganizationIdLayout
+export default DashboardLayout

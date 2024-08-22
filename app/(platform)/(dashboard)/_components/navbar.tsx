@@ -10,8 +10,8 @@ const NavbarPage = () => {
             <div className="hidden md:flex">
                 <Logo />
             </div>
-            <Button size='sm' className="rounded-sm py-2 px-4 hidden md:block" >Create</Button>
-            <Button size='sm' className="rounded-sm py-2 px-4  md:hidden" >
+            <Button variant="primary" size='sm' className="rounded-sm py-2 px-4 hidden md:block" >Create</Button>
+            <Button variant="primary" size='sm' className="rounded-sm py-2 px-4  md:hidden" >
                 <Plus className="w-4 h-4" />
             </Button>
         </div>
