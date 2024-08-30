@@ -55,7 +55,7 @@ const Sidebar = ({ storageKey = "t-sidebar-state" }: SidebarProps) => {
 
     return (
         <>
-            <div className="font-medium flex  items-center ">
+            <div className="font-medium flex justify-between  items-center ">
                 <span >WorkSpaces</span>
                 <div >
                     <Button
