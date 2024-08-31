@@ -11,6 +11,7 @@ import { cn } from "@/lib/utils"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { usePathname, useRouter } from "next/navigation"
+import { Skeleton } from "@/components/ui/skeleton"
 
 export type Organization = {
     id: string,
@@ -112,5 +113,16 @@ const NavItems = ({ onExpand, organization, isActive, isExpanded }: NavItemsProp
     )
 }
 
+
+NavItems.Skeleton = function NavItemsSkeleton() {
+    return (
+        <div className="flex items-center  mt-2 w-full  ">
+            <div className="w-10 h-10 relative shrink-0">
+                <Skeleton className="absolute w-full h-full " />
+            </div>
+            <Skeleton className="w-full  h-10" />
+        </div>
+    )
+}
 
 export default NavItems
